@@ -1,3 +1,89 @@
+\section {Športová streľba na terč}
+Streľba na terč má bohatú históriu, ktorá sa vyvinula z životne dôležitej schopnosti prežitia 
+až po moderný súťažný šport. Tento vývoj bol ovplyvnený technologickým pokrokom, zmenami v 
+spoločenských postojoch k strelným zbraniam a lukostreľbe a vývojom rôznych typov terčov, ako 
+sú oceľové, papierové, skákacie a siluetové terče ~\cite{target_shooting}.
+
+Streľba na terč bola zaradená do programu olympijských hier už v Paríži v roku 1896, kde sa 
+prvýkrát objavila ako súťažný šport. V tomto období sa objavili rôzne formy streleckých súťaží, 
+vrátane streľby na živé holuby. Po tomto ročníku bolo zavedené strieľanie na terče z umelej 
+hmoty ~\cite{target_shooting_olympic}.
+
+\subsection{Moderná streľba na terč}
+Existujúce systémy na vyhodnocovanie zásahov v športovej streľbe kombinujú rôzne technológie na 
+meranie a analýzu zásahov. Tieto riešenia zvyčajne zahŕňajú použitie digitálnych terčov, kamier, 
+senzorov alebo iných optických zariadení, ktoré umožňujú automatické zistenie polohy zásahov na terči. 
+Mnohé komerčné systémy používajú kamery na analýzu pohybu a zásahov v reálnom čase. Tieto systémy 
+sú schopné poskytnúť okamžité výsledky, no sú často veľmi nákladné a vyžadujú zložité zariadenie, 
+čo môže byť obmedzujúce pre amatérske alebo menšie strelecké kluby.
+
+Niektoré z týchto riešení využívajú pokročilé metódy spracovania obrazu, ako je detekcia hrán alebo 
+identifikácia štruktúr na terči, aby presne vyhodnotili zásahy. Napríklad, pri analýze obrazu sa často 
+využíva technika, ktorá sleduje zmeny v pixeloch obrazu medzi jednotlivými snímkami, aby sa určilo 
+miesto zásahu. V niektorých prípadoch sa využívajú algoritmy strojového učenia, ktoré sa učia rozpoznať 
+vzory na terči a určiť bod zásahu s vysokou presnosťou.
+
+Existujú aj systémy, ktoré sú zamerané na analýzu štatistík strelca počas viacerých kôl, čím umožňujú 
+trénerom a športovcom lepšie pochopiť výkon a identifikovať oblasti na zlepšenie.
+
+
+\section {Python}
+Python je interpretovaný objektovo orientovaný, vysokoúrovňový programovací jazyk s dynamickou śemantikou. 
+O vznik tohoto programovacieho jazyka sa zaslúžil Guido van Rossum. Python bol vydaný v roku 1991 ~\cite{teradata_python}. 
+Jeho vysokoúrovňové vstavané dátové štruktúry v kombinácii s dynamickým písaníma a dynamickým viazaním ho 
+robia veľmi atraktívnym pre rýchly vývoj aplikácií, ako aj pre použitie ako skriptovací alebo lepiaci jazyk 
+na prepojenie existujúcich komponentov ~\cite{python_org}. 
+
+Python je jedným z najznámejších programovacích jazykov práve kvôli jeho jednoduchej a zrozumiteľnej syntaxi, 
+bloky kódu sú definované pomocou odsádzania bez potreby používania zložených zátvoriek. 
+
+\subsection{Výhody jazyka python}
+Medzi najväčšie výhody jazyka patrí čitateľnosť jeho kódu, jeho podpora rôznych štýlov programovania, vrátane 
+procedurálneho, objektovo-orientovaného a funkcionálneho programovania. Vďaka obľúbenosti tohoto jazyka medzi 
+programátormi po celom svete, tento jazyk disponuje množstvom dokumentácie a tutoriálov.
+
+\subsection{Nevýhody jazyka python}
+Python je interpretovaný jazyk, to znamená, že je pomalší ako kompilované jazyky ako sú C, C++ alebo Pascal. 
+Jednou z najväčších nevýhod je spotreba pamäte. Dynamická povaha premenných a objektov jazyka spôsobuje určitú 
+réžiu z hľadiska pamäte. Keďže jazyk musí byť pripravený na neustále sa meniace typy údajov, môže alokovať viac 
+pamäte, ako je nevyhnutne potrebné ~\cite{codewithc_python_memory}. 
+
+
+
+\section{OpenCV}
+OpenCV je skratka pre Open Source Computer Vision a je to knižnica funkcií, ktoré sú užitočné pri programovaní 
+aplikácií počítačového videnia v reálnom čase. Termín počítačové videnie sa používa pre subjekt, ktorý vykonáva 
+analýzu digitálnych obrázkov a videí pomocou počítačového programu. Počítačové videnie je dôležitou súčasťou 
+moderných disciplín, akými sú umelá inteligencia a strojové učenie ~\cite{tutorialspoint_opencv}. V práci 
+spomínam funkcie mnou považované za kľúčové pre túto prácu, samotná knižnica disponuje nikoľkonásobne viac 
+funkciami, pre viac informácií je dostupná dokumentácia knižnice ~\cite{documentation_opencv}.
+
+\subsection{Čítanie obrázkov}
+Medzi jednu z najdôležitejších funckcií knižnice patrí funkcia na čítanie obrázkov. Knižnica OpenCV poskytuje 
+funkciu s názvom imread(), ktorá slúži na načítanie obrázku do pamäte zo zvoleného súboru pomocou prvého argumentu 
+funkcie.  
+
+Funkcia prečíta obrázok a uloží ho vo formáte matice, kde tvar matice zodpovedá rozmerom obrázka. Druhým argumentom 
+funkcie je parameter menom flags. Tento parameter rozhoduje o tom ako je obrázok načítaný, teda môže byť načítaný 
+ako farebný (predvolené), šedý (jeden kanál) alebo nezmenený, teda čítaný taký aký je, ale zachovávajúci všetky 
+kanály transparentnosti.
+
+\subsection{Vlastnosti obrázka}
+Medzi funkcie pracujúce s vlastnosťami obrázkov radíme funkcie shape() a resize()
+
+Funkcia shape() sa používa na získanie rozmerov obrázka alebo matrice. Táto funkcia vráti veľkosť obrázka alebo 
+matice ako n-ticu, čo môže byť užitočné na pochopenie štruktúry údajov. Často sa používa na kontrolu vlastností 
+obrazu, ako sú šírka, výška a farebné kanály.
+
+Funkcia resize() sa používa na zmenu veľkosti obrázka na zadanú veľkosť alebo podľa danej mierky. Táto funkcia 
+je kľúčová pri mnohých úlohách spracovania obrazu, kde je potrebné upraviť veľkosť obrázkov pred vykonaním operácií, 
+ako je detekcia alebo klasifikácia objektov.
+
+\subsection{Vyobrazenie geometrických útvarov}
+Kreslenie tvarov a textu na obrázky je užitočné na vizualizáciu údajov alebo anotácií v aplikáciách počítačového 
+videnia. OpenCV poskytuje rôzne funkcie na kreslenie základných tvarov ako sú čiary(cv2.line), obdĺžniky(cv2.rectangle) 
+a kruhy(cv2.circle), taktiež umožňuje pridávanie textu(cv2.puText) do obrázkov.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                            %%
 %% Štruktúra záverečnej práce %%
