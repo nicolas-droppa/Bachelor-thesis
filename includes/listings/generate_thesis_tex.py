@@ -106,7 +106,7 @@ def generate_thesis_tex(
 # Testovacie volanie funkcie
 generate_thesis_tex(
     author="Nicolas Droppa",
-    reg_nr="FEI-xxxx-xxxx",
+    reg_nr="FEI-16605-120403",
     title="Program pre vyhodnotenie zásahov pri športovej streľbe",
     title_en="Program for Evaluating Accuracy in Sports Shooting",
     day="31",
