@@ -27,27 +27,41 @@ Existujú aj systémy, ktoré sú zamerané na analýzu štatistík strelca poč
 trénerom a športovcom lepšie pochopiť výkon a identifikovať oblasti na zlepšenie.
 
 
-\section {Python}
-Python je interpretovaný objektovo orientovaný, vysokoúrovňový programovací jazyk s dynamickou śemantikou. 
-O vznik tohoto programovacieho jazyka sa zaslúžil Guido van Rossum. Python bol vydaný v roku 1991 ~\cite{teradata_python}. 
-Jeho vysokoúrovňové vstavané dátové štruktúry v kombinácii s dynamickým písaníma a dynamickým viazaním ho 
-robia veľmi atraktívnym pre rýchly vývoj aplikácií, ako aj pre použitie ako skriptovací alebo lepiaci jazyk 
-na prepojenie existujúcich komponentov ~\cite{python_org}. 
+\section {Programovací jazyk JavaScript}
+JavaScript je objektovo orientovaný, vysokoúrovňový programovací jazyk. Narozdiel od kompilovaných jazykov kde
+sa najprv kód preloží do strojového kódu a následne vytvorí spustiteľný súbor ako napríklad jazyk C, C++ alebo Rust, JavaScript 
+je jazyk interpretovaný - teda kód sa vykonáva riadok po riadku pomocou interpreteru.
+O vznik tohoto programovacieho jazyka sa zaslúžil Brendan Eich. JavaScript bol vydaný v roku 1995 v máji a to iba za 
+10 dní. Jeho prvým názvom bolo Mocha ~\cite{geeksforgeeks_js}. 
+Tento programovací jazyk umožňuje implementovať komplexné funkcie na webových stránkach - zakaždým, keď webová
+stránka robí viac, než len sedí a zobrazuje statické dáta - zobrazuje včasné aktualizácie obsahu, interaktívne mapy,
+animovanú 2D/3D grafiku, rolovacie video jukeboxy alebo iné interaktívne prvky - ide pravdepodobne o zakomponovanie JavaScriptu ~\cite{mdn_js}. 
 
-Python je jedným z najznámejších programovacích jazykov práve kvôli jeho jednoduchej a zrozumiteľnej syntaxi, 
-bloky kódu sú definované pomocou odsádzania bez potreby používania zložených zátvoriek. 
+JavaScript patrí medzi najpoužívanejšie programovacie jazyky najmä vďaka svojej jednoduchej a flexibilnej syntaxe, ktorá umožňuje rýchly štart 
+a intuitívnu prácu s webovými technológiami.
 
-\subsection{Výhody jazyka python}
-Medzi najväčšie výhody jazyka patrí čitateľnosť jeho kódu, jeho podpora rôznych štýlov programovania, vrátane 
-procedurálneho, objektovo-orientovaného a funkcionálneho programovania. Vďaka obľúbenosti tohoto jazyka medzi 
-programátormi po celom svete, tento jazyk disponuje množstvom dokumentácie a tutoriálov.
+Okrem svojej úlohy pri základnej interaktivite sa JavaScript v modernej webovej architektúre presunul z doplnkového jazyka fungujúceho popri 
+html a css na samotne plnohodnotný základ pre vývoj komplexných aplikácií. Vďaka vývoju frameworkov ako React, Vue či Angular sa JavaScript 
+stal nástrojom nielen pre manipuláciu s DOM - Document Object Model - štruktúrovaná reprezentácia HTML, ale aj pre budovanie komponentovo 
+orientovaných systémov, spracovanie stavov aplikácií, routing či prácu s API na strane klienta. Tento posun umožnil načítavanie nových bez 
+opätovného načítania celej stránky. Výsledkom je rýchlejšia, plynulejšia a používateľsky prívetivejšia skúsenosť, porovnateľná s natívnymi 
+aplikáciami.
 
-\subsection{Nevýhody jazyka python}
-Python je interpretovaný jazyk, to znamená, že je pomalší ako kompilované jazyky ako sú C, C++ alebo Pascal. 
-Jednou z najväčších nevýhod je spotreba pamäte. Dynamická povaha premenných a objektov jazyka spôsobuje určitú 
-réžiu z hľadiska pamäte. Keďže jazyk musí byť pripravený na neustále sa meniace typy údajov, môže alokovať viac 
-pamäte, ako je nevyhnutne potrebné ~\cite{codewithc_python_memory}. 
+\subsection{Výhody jazyka JavaScript}
+Medzi veľkú výhodu jazyka patrí "Client-Side Scripting", Teda JavaScript beží v používateľovom prehliadači, to znamená, že má kratší čas 
+odpovedí, pretože nie je nutné komunikovať so serverom. Veľmi kladnou záležitosťou tohoto jazyka je určite jeho všestrannosť,
+JavaScript je možné použiť pre rôžnu škálu úloh, od jednoduchých výpočtov až po zložité aplikácie na strane servera. Dôvodom, prečo je jazyk tak 
+populárny pri vývoji webových aplikácií je, že umožňuje reagovať na klikanie, stlačenie kláves, zmeny okna a rozhrania, atď. v reálnom čase.
+Javascript funguje asynchrónne - teda zvláda úlohy ako načítanie dát zo servera bez toho aby zamrzlo používaťeľské rozhranie. Vďaka 
+obľúbenosti tohoto jazyka medzi  programátormi po celom svete, tento jazyk disponuje množstvom dokumentácie a tutoriálov ~\cite{gfg_intro_js}.
 
+\subsection{Nevýhody jazyka JavaScript}
+JavaScript je interpretovaný jazyk, to znamená, že je pomalší ako kompilované jazyky ako sú C, C++ alebo Pascal. 
+Keďže JavaScript beží na strane klienta, je náchylný na útoky ako Cross-Site Scripting (XSS) a Cross-Site Request Forgery (CSRF).
+JavaScript je dynamicky typovaný jazyk, čo znamená, že typy premenných nie sú striktne definované. To môže viesť k chybám, ktoré sa 
+objavia až pri spustení programu, a sťažuje to údržbu väčších kódových báz. JavaScript sa vo veľkej miere spolieha na asynchrónne programovanie, 
+čo môže byť pre vývojárov náročné na pochopenie a správne implementovanie. Aj keď moderné konštrukcie ako Promises a async/await pomáhajú, 
+stále existuje riziko vzniku tzv. "callback hell" ~\cite{itpedia_js_downsides}.
 
 
 \section{OpenCV}
