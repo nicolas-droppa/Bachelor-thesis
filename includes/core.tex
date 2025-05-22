@@ -63,6 +63,15 @@ objavia až pri spustení programu, a sťažuje to údržbu väčších kódový
 čo môže byť pre vývojárov náročné na pochopenie a správne implementovanie. Aj keď moderné konštrukcie ako Promises a async/await pomáhajú, 
 stále existuje riziko vzniku tzv. "callback hell" ~\cite{itpedia_js_downsides}.
 
+\subsection{JavaScript na serveri}
+Hoci bol JavaScript pôvodne vytvorený ako skriptovací jazyk pre webové prehliadače, vďaka Node.js sa rozšíril tento jazyk aj na stranu 
+serveru - teda back-end. Node.js umožňuje vývojárom písať serverový kód v rovnakom jazyku, aký používajú aj pre klientskú časť, čo 
+zjednodušuje vývoj tzv. fullstack aplikácií.
+
+Medzi najbežnejšie využitia JavaScriptu na serveri patrí obsluha API požiadaviek, spracovanie dát, práca s databázami a správa autentifikácie. 
+Jednoduchý a výkonný framework ako Express.js výrazne urýchľuje tvorbu webových serverov. Týmto spôsobom sa z JavaScriptu stal univerzálny 
+jazyk schopný pokrývať celý vývojový cyklus webovej aplikácie~\cite{nodejs_gfg}.
+
 
 \section{PWA}
 PWA je skratkou pre progressive web app - teda progresívna webová aplikácia vytvorená pomocou štandardných webových technológií ako HTML, 
@@ -71,9 +80,16 @@ aplikácie môžu byť inštalované na zariadenia a fungovať offline, čo zvy�
 
 \subsection{Silné stránky PWA}
 Dostupnosť bez ohľadu na internetové pripojenie - Progresívne webové aplikácie nie sú závislími od pripojenia používateľa k internetu tak ako
-to býva u zvyčajných webstránok. Pri používateľovej návšteve PWA bude zaregistrovaný service worker, DOPLŇ OBRÁZOK, ktorý deteguje a reaguje na
+to býva u zvyčajných webstránok. Pri používateľovej návšteve PWA bude zaregistrovaný service worker, ktorý deteguje a reaguje na
 zmeny používateľovho pripojenia. Práve pre túto prácu teda bude kľúčovou funkcionalitou to, že dokáže poskytnúť plnohodnotnú funkcionalitu aj
-pre takých používateľov ktorý nie sú v daný moment propojený k internetu.
+pre takých používateľov ktorý nie sú v daný moment propojený k internetu. Podrobnosti budú v podkapitole \ref{subsec:neviditeľnávrstva}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{img/image1.pdf}
+  \caption{Názov obrázka \cite{Ater2017BuildingPWA}}
+  \label{fig:obrazok1}
+\end{figure}
 
 Krátke doby načítavania - Pri používaní service workerov je možné vytvárať stránky, ktoré budú zobrazené hneď po otvorení bez ohľadu na to
 ako silné a dobré pripojenie používateľ má. Stŕanky sa dokážu načítať v priebehu milisekúnd za použitia metódy "offline first" ~\cite{Ater2017BuildingPWA}.
@@ -83,6 +99,32 @@ notifikácie sú skvelým nástrojom ako si môže stránka udržať viditeľnos
 
 Natívny výzor - PWA môžu mať kompletne nerozoznatelný vzhľad od klasických desktopových aplikácií. Je možné aby sa zapínali bez prehliadačového
 user interface-u, mali animáciu alebo nejaké intro pri spúštaní, dokonca sa môžu aj uzamknúť na predvolenú orientáciu, na šírku alebo výšku.
+
+\subsection{Neviditeľná vrstva}
+\label{sec:neviditeľnávrstva}
+Tak ako sme už načrtli, základom každej progresívnej webovej aplikácie je service worker. Pred tým ako sa vôbec service workeri objavili, kód
+bežal buď na strane serveru alebo na strane klienta, spolu so service workermi bola zavedená nová vrstva. Service worker je umiestnený za webovými
+prehlidačmi, tak ako je zobrazené na obrázku \ref{fig:obrazok1}. Service worker dokáže takto obsluhovať rôzne podnety zo všetkých stránok pod jeho
+kontrolou. 
+
+Práve vďaka tejto vrstve dokážeme odpovedať na podnety bez ohľadu na pripojenie používateľa - teda aj keď je offline, práve to čo je vhodné pre
+našu aplikáciu. Táto vrstva taktiež dokáže detegovať pomalé odozvy od servera a posielať obsah v cache.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{img/image2.pdf}
+  \caption{Názov obrázka \cite{Ater2017BuildingPWA}}
+  \label{fig:obrazok2}
+\end{figure}
+
+Analogicky touto logikou je možná aj funckia spomínaných push notifikácií po tom ako používateľ opustil webovú stránku. Teda service worker ostáva
+stále pracovať a môže s webom naďalej komunikovať.
+
+
+\section {Programovací jazyk PHP}
+
+
+\section {Databáza}
 
 
 \section{OpenCV}
