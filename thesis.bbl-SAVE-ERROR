@@ -1,0 +1,607 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{target_shooting}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=7a20631a83d7600c67fb37163f2d015e}{%
+           family={{Legion Targets}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{7a20631a83d7600c67fb37163f2d015e}
+      \strng{fullhash}{7a20631a83d7600c67fb37163f2d015e}
+      \strng{fullhashraw}{7a20631a83d7600c67fb37163f2d015e}
+      \strng{bibnamehash}{7a20631a83d7600c67fb37163f2d015e}
+      \strng{authorbibnamehash}{7a20631a83d7600c67fb37163f2d015e}
+      \strng{authornamehash}{7a20631a83d7600c67fb37163f2d015e}
+      \strng{authorfullhash}{7a20631a83d7600c67fb37163f2d015e}
+      \strng{authorfullhashraw}{7a20631a83d7600c67fb37163f2d015e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Evolution of Target Shooting: From Practice to Competition}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.legiontargets.com/blogs/legion/the-evolution-of-target-shooting-from-practice-to-competition
+      \endverb
+      \verb{url}
+      \verb https://www.legiontargets.com/blogs/legion/the-evolution-of-target-shooting-from-practice-to-competition
+      \endverb
+    \endentry
+    \entry{target_shooting_olympic}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=ecce4f4e08032403f6f8ab1030cfe747}{%
+           family={{The Scotsman}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ecce4f4e08032403f6f8ab1030cfe747}
+      \strng{fullhash}{ecce4f4e08032403f6f8ab1030cfe747}
+      \strng{fullhashraw}{ecce4f4e08032403f6f8ab1030cfe747}
+      \strng{bibnamehash}{ecce4f4e08032403f6f8ab1030cfe747}
+      \strng{authorbibnamehash}{ecce4f4e08032403f6f8ab1030cfe747}
+      \strng{authornamehash}{ecce4f4e08032403f6f8ab1030cfe747}
+      \strng{authorfullhash}{ecce4f4e08032403f6f8ab1030cfe747}
+      \strng{authorfullhashraw}{ecce4f4e08032403f6f8ab1030cfe747}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Final curtain: The last live pigeon shooting event at the Olympic Games, 1900}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://www.scotsman.com/sport/final-curtain-the-last-live-pigeon-shooting-event-at-the-olympic-games-1900-2474241
+      \endverb
+      \verb{url}
+      \verb https://www.scotsman.com/sport/final-curtain-the-last-live-pigeon-shooting-event-at-the-olympic-games-1900-2474241
+      \endverb
+    \endentry
+    \entry{roberts2024understanding}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5adb3dbb9460de04fd328c5d57fb27f7}{%
+           family={{Roberts, Justin}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Squadspot}%
+      }
+      \strng{namehash}{5adb3dbb9460de04fd328c5d57fb27f7}
+      \strng{fullhash}{5adb3dbb9460de04fd328c5d57fb27f7}
+      \strng{fullhashraw}{5adb3dbb9460de04fd328c5d57fb27f7}
+      \strng{bibnamehash}{5adb3dbb9460de04fd328c5d57fb27f7}
+      \strng{authorbibnamehash}{5adb3dbb9460de04fd328c5d57fb27f7}
+      \strng{authornamehash}{5adb3dbb9460de04fd328c5d57fb27f7}
+      \strng{authorfullhash}{5adb3dbb9460de04fd328c5d57fb27f7}
+      \strng{authorfullhashraw}{5adb3dbb9460de04fd328c5d57fb27f7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{Understanding Target Shooting Scoring: A Comprehensive Guide}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.squadspot.com.au/articles/understanding-target-shooting-scoring-a-comprehensive-guide
+      \endverb
+      \verb{url}
+      \verb https://www.squadspot.com.au/articles/understanding-target-shooting-scoring-a-comprehensive-guide
+      \endverb
+    \endentry
+    \entry{geeksforgeeks_js}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f1e069787ece74531d112559945c6871}{%
+           family={{GeeksforGeeks}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhashraw}{f1e069787ece74531d112559945c6871}
+      \strng{bibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorbibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authornamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhashraw}{f1e069787ece74531d112559945c6871}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{History of JavaScript}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/history-of-javascript/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/history-of-javascript/
+      \endverb
+    \endentry
+    \entry{mdn_js}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=eace3534eb86e51f9a1db37427425ce9}{%
+           family={{MDN Web Docs}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{eace3534eb86e51f9a1db37427425ce9}
+      \strng{fullhash}{eace3534eb86e51f9a1db37427425ce9}
+      \strng{fullhashraw}{eace3534eb86e51f9a1db37427425ce9}
+      \strng{bibnamehash}{eace3534eb86e51f9a1db37427425ce9}
+      \strng{authorbibnamehash}{eace3534eb86e51f9a1db37427425ce9}
+      \strng{authornamehash}{eace3534eb86e51f9a1db37427425ce9}
+      \strng{authorfullhash}{eace3534eb86e51f9a1db37427425ce9}
+      \strng{authorfullhashraw}{eace3534eb86e51f9a1db37427425ce9}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is JavaScript?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript
+      \endverb
+    \endentry
+    \entry{gfg_intro_js}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f1e069787ece74531d112559945c6871}{%
+           family={{GeeksforGeeks}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhashraw}{f1e069787ece74531d112559945c6871}
+      \strng{bibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorbibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authornamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhashraw}{f1e069787ece74531d112559945c6871}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to JavaScript}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/introduction-to-javascript/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/introduction-to-javascript/
+      \endverb
+    \endentry
+    \entry{itpedia_js_downsides}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d88812cc8b7bb2fd3841d65b15b70cb9}{%
+           family={Hoogenraad},
+           familyi={H\bibinitperiod},
+           given={Wim},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d88812cc8b7bb2fd3841d65b15b70cb9}
+      \strng{fullhash}{d88812cc8b7bb2fd3841d65b15b70cb9}
+      \strng{fullhashraw}{d88812cc8b7bb2fd3841d65b15b70cb9}
+      \strng{bibnamehash}{d88812cc8b7bb2fd3841d65b15b70cb9}
+      \strng{authorbibnamehash}{d88812cc8b7bb2fd3841d65b15b70cb9}
+      \strng{authornamehash}{d88812cc8b7bb2fd3841d65b15b70cb9}
+      \strng{authorfullhash}{d88812cc8b7bb2fd3841d65b15b70cb9}
+      \strng{authorfullhashraw}{d88812cc8b7bb2fd3841d65b15b70cb9}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{6 moderných programovacích jazykov a ich nevýhody}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.itpedia.nl/sk/2023/07/13/6-moderne-programmeertalen-en-hun-downsides/
+      \endverb
+      \verb{url}
+      \verb https://www.itpedia.nl/sk/2023/07/13/6-moderne-programmeertalen-en-hun-downsides/
+      \endverb
+    \endentry
+    \entry{nodejs_gfg}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f1e069787ece74531d112559945c6871}{%
+           family={{GeeksforGeeks}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhashraw}{f1e069787ece74531d112559945c6871}
+      \strng{bibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorbibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authornamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhashraw}{f1e069787ece74531d112559945c6871}
+      \field{extraname}{3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Node.js}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/node-js-introduction/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/node-js-introduction/
+      \endverb
+    \endentry
+    \entry{Ater2017BuildingPWA}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=def4880678fc1daf4f34750bcc4befb9}{%
+           family={Ater},
+           familyi={A\bibinitperiod},
+           given={Tal},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media}%
+      }
+      \strng{namehash}{def4880678fc1daf4f34750bcc4befb9}
+      \strng{fullhash}{def4880678fc1daf4f34750bcc4befb9}
+      \strng{fullhashraw}{def4880678fc1daf4f34750bcc4befb9}
+      \strng{bibnamehash}{def4880678fc1daf4f34750bcc4befb9}
+      \strng{authorbibnamehash}{def4880678fc1daf4f34750bcc4befb9}
+      \strng{authornamehash}{def4880678fc1daf4f34750bcc4befb9}
+      \strng{authorfullhash}{def4880678fc1daf4f34750bcc4befb9}
+      \strng{authorfullhashraw}{def4880678fc1daf4f34750bcc4befb9}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781491961650}
+      \field{title}{Building Progressive Web Apps: Bringing the Power of Native to the Browser}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://github.com/febycloud/PROG8110/blob/master/Tal-Ater-Building-Progressive-Web-Apps_-Bringing-the-Power-of-Native-to-the-Browser-OReilly-Media-2017.pdf
+      \endverb
+      \verb{url}
+      \verb https://github.com/febycloud/PROG8110/blob/master/Tal-Ater-Building-Progressive-Web-Apps_-Bringing-the-Power-of-Native-to-the-Browser-OReilly-Media-2017.pdf
+      \endverb
+    \endentry
+    \entry{sklar2004learningphp5}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=f7c8a93bd338bb0fd0973153d8260364}{%
+           family={Sklar},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Sebastopol, CA}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly}%
+      }
+      \strng{namehash}{f7c8a93bd338bb0fd0973153d8260364}
+      \strng{fullhash}{f7c8a93bd338bb0fd0973153d8260364}
+      \strng{fullhashraw}{f7c8a93bd338bb0fd0973153d8260364}
+      \strng{bibnamehash}{f7c8a93bd338bb0fd0973153d8260364}
+      \strng{authorbibnamehash}{f7c8a93bd338bb0fd0973153d8260364}
+      \strng{authornamehash}{f7c8a93bd338bb0fd0973153d8260364}
+      \strng{authorfullhash}{f7c8a93bd338bb0fd0973153d8260364}
+      \strng{authorfullhashraw}{f7c8a93bd338bb0fd0973153d8260364}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1st}
+      \field{isbn}{0596005601, 9780596005603}
+      \field{note}{Accessed: 2025-05-29}
+      \field{title}{Learning PHP 5}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb https://archive.org/details/learningphp50000skla
+      \endverb
+      \verb{url}
+      \verb https://archive.org/details/learningphp50000skla
+      \endverb
+    \endentry
+    \entry{php_manual}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=8891c29d42d5f739b253244425090885}{%
+           family={{The PHP Group}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {The PHP Group}%
+      }
+      \strng{namehash}{8891c29d42d5f739b253244425090885}
+      \strng{fullhash}{8891c29d42d5f739b253244425090885}
+      \strng{fullhashraw}{8891c29d42d5f739b253244425090885}
+      \strng{bibnamehash}{8891c29d42d5f739b253244425090885}
+      \strng{authorbibnamehash}{8891c29d42d5f739b253244425090885}
+      \strng{authornamehash}{8891c29d42d5f739b253244425090885}
+      \strng{authorfullhash}{8891c29d42d5f739b253244425090885}
+      \strng{authorfullhashraw}{8891c29d42d5f739b253244425090885}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PHP: Hypertext Preprocessor Manual}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.php.net/manual/en/
+      \endverb
+      \verb{url}
+      \verb https://www.php.net/manual/en/
+      \endverb
+    \endentry
+    \entry{free_programming_books}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=be116a1c8a169e95de151216badda5fb}{%
+           family={{EbookFoundation}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{be116a1c8a169e95de151216badda5fb}
+      \strng{fullhash}{be116a1c8a169e95de151216badda5fb}
+      \strng{fullhashraw}{be116a1c8a169e95de151216badda5fb}
+      \strng{bibnamehash}{be116a1c8a169e95de151216badda5fb}
+      \strng{authorbibnamehash}{be116a1c8a169e95de151216badda5fb}
+      \strng{authornamehash}{be116a1c8a169e95de151216badda5fb}
+      \strng{authorfullhash}{be116a1c8a169e95de151216badda5fb}
+      \strng{authorfullhashraw}{be116a1c8a169e95de151216badda5fb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{free-programming-books}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://github.com/EbookFoundation/free-programming-books
+      \endverb
+      \verb{url}
+      \verb https://github.com/EbookFoundation/free-programming-books
+      \endverb
+    \endentry
+    \entry{tutorialspoint_php_introduction}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=da653faa9f00528be9a57f3474f0e437}{%
+           family={{Tutorialspoint}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Tutorialspoint}%
+      }
+      \strng{namehash}{da653faa9f00528be9a57f3474f0e437}
+      \strng{fullhash}{da653faa9f00528be9a57f3474f0e437}
+      \strng{fullhashraw}{da653faa9f00528be9a57f3474f0e437}
+      \strng{bibnamehash}{da653faa9f00528be9a57f3474f0e437}
+      \strng{authorbibnamehash}{da653faa9f00528be9a57f3474f0e437}
+      \strng{authornamehash}{da653faa9f00528be9a57f3474f0e437}
+      \strng{authorfullhash}{da653faa9f00528be9a57f3474f0e437}
+      \strng{authorfullhashraw}{da653faa9f00528be9a57f3474f0e437}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PHP Tutorial}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.tutorialspoint.com/php/index.htm
+      \endverb
+      \verb{url}
+      \verb https://www.tutorialspoint.com/php/index.htm
+      \endverb
+    \endentry
+    \entry{geeksforgeeks_php_vs_aspnet}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f1e069787ece74531d112559945c6871}{%
+           family={{GeeksforGeeks}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Sanchhaya Education Private Limited}%
+      }
+      \strng{namehash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhashraw}{f1e069787ece74531d112559945c6871}
+      \strng{bibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorbibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authornamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhashraw}{f1e069787ece74531d112559945c6871}
+      \field{extraname}{4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{Difference between PHP and .NET}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/php/difference-between-php-and-net/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/php/difference-between-php-and-net/
+      \endverb
+    \endentry
+    \entry{redhat_rest_api}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a82007c47b25723539a00ff94e8b3d27}{%
+           family={{Red Hat}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{fullhash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{fullhashraw}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{bibnamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authorbibnamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authornamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authorfullhash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authorfullhashraw}{a82007c47b25723539a00ff94e8b3d27}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a REST API?}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.redhat.com/en/topics/api/what-is-a-rest-api
+      \endverb
+      \verb{url}
+      \verb https://www.redhat.com/en/topics/api/what-is-a-rest-api
+      \endverb
+    \endentry
+    \entry{wpwebinfotech_simple_rest_php}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=23bd157bac68b8b308244d644feb6153}{%
+           family={{WPWeb Infotech}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{23bd157bac68b8b308244d644feb6153}
+      \strng{fullhash}{23bd157bac68b8b308244d644feb6153}
+      \strng{fullhashraw}{23bd157bac68b8b308244d644feb6153}
+      \strng{bibnamehash}{23bd157bac68b8b308244d644feb6153}
+      \strng{authorbibnamehash}{23bd157bac68b8b308244d644feb6153}
+      \strng{authornamehash}{23bd157bac68b8b308244d644feb6153}
+      \strng{authorfullhash}{23bd157bac68b8b308244d644feb6153}
+      \strng{authorfullhashraw}{23bd157bac68b8b308244d644feb6153}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to Build a Simple REST API in PHP}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://wpwebinfotech.com/blog/how-to-build-simple-rest-api-in-php/
+      \endverb
+      \verb{url}
+      \verb https://wpwebinfotech.com/blog/how-to-build-simple-rest-api-in-php/
+      \endverb
+    \endentry
+    \entry{php_manual_pdo}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=8891c29d42d5f739b253244425090885}{%
+           family={{The PHP Group}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {The PHP Group}%
+      }
+      \strng{namehash}{8891c29d42d5f739b253244425090885}
+      \strng{fullhash}{8891c29d42d5f739b253244425090885}
+      \strng{fullhashraw}{8891c29d42d5f739b253244425090885}
+      \strng{bibnamehash}{8891c29d42d5f739b253244425090885}
+      \strng{authorbibnamehash}{8891c29d42d5f739b253244425090885}
+      \strng{authornamehash}{8891c29d42d5f739b253244425090885}
+      \strng{authorfullhash}{8891c29d42d5f739b253244425090885}
+      \strng{authorfullhashraw}{8891c29d42d5f739b253244425090885}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PHP: PDO – PHP Data Objects}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.php.net/manual/en/book.pdo.php
+      \endverb
+      \verb{url}
+      \verb https://www.php.net/manual/en/book.pdo.php
+      \endverb
+    \endentry
+    \entry{owasp_sql_injection}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b0d7a4bf1a0878d4e92cdd7461e48710}{%
+           family={{OWASP Foundation}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{fullhash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{fullhashraw}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{bibnamehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authorbibnamehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authornamehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authorfullhash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authorfullhashraw}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SQL Injection Prevention Cheat Sheet}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+      \endverb
+      \verb{url}
+      \verb https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+      \endverb
+    \endentry
+    \entry{tutorialspoint_opencv}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=02bb701746a2e79501c61d749787e4a0}{%
+           family={{TutorialsPoint}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{02bb701746a2e79501c61d749787e4a0}
+      \strng{fullhash}{02bb701746a2e79501c61d749787e4a0}
+      \strng{fullhashraw}{02bb701746a2e79501c61d749787e4a0}
+      \strng{bibnamehash}{02bb701746a2e79501c61d749787e4a0}
+      \strng{authorbibnamehash}{02bb701746a2e79501c61d749787e4a0}
+      \strng{authornamehash}{02bb701746a2e79501c61d749787e4a0}
+      \strng{authorfullhash}{02bb701746a2e79501c61d749787e4a0}
+      \strng{authorfullhashraw}{02bb701746a2e79501c61d749787e4a0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OpenCV Python Tutorial}
+      \field{year}{[N.d.]}
+      \verb{urlraw}
+      \verb https://www.tutorialspoint.com/opencv_python/index.htm
+      \endverb
+      \verb{url}
+      \verb https://www.tutorialspoint.com/opencv_python/index.htm
+      \endverb
+    \endentry
+    \entry{documentation_opencv}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5bd4c87976f48e6a53919d53e14025e9}{%
+           family={{OpenCV}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd4c87976f48e6a53919d53e14025e9}
+      \strng{fullhash}{5bd4c87976f48e6a53919d53e14025e9}
+      \strng{fullhashraw}{5bd4c87976f48e6a53919d53e14025e9}
+      \strng{bibnamehash}{5bd4c87976f48e6a53919d53e14025e9}
+      \strng{authorbibnamehash}{5bd4c87976f48e6a53919d53e14025e9}
+      \strng{authornamehash}{5bd4c87976f48e6a53919d53e14025e9}
+      \strng{authorfullhash}{5bd4c87976f48e6a53919d53e14025e9}
+      \strng{authorfullhashraw}{5bd4c87976f48e6a53919d53e14025e9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OpenCV Documentation}
+      \field{year}{[N.d.]}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/index.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/index.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

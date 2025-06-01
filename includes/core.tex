@@ -29,53 +29,55 @@ trénerom a športovcom lepšie pochopiť výkon a identifikovať oblasti na zle
 \subsection{Prehľad disciplín a ich skórovacích systémov}
 V športovej streľbe sa v súčasnosti používajú tri základné typy skórovacích systémov.
 
-1. Elektronické, kde sa využívajú moderné senzory spolu so 
+\textbf{1. Elektronické}, kde sa využívajú moderné senzory spolu so 
 softvérom pre okamžité a presné vyhodnotenie strielania. Jedná sa o veľmi presnú a spoľahlivú metódu
 využívanú v dnešnej modernej kompetitívnej streľbe. 
 
-2. Manuálne skórovanie, ide o streľbu
+\textbf{2. Manuálne skórovanie}, ide o streľbu
 na papierové terče, kde rozhodcovia zaznamenávajú výsledky, však táto metóda vyžaduje pozornosť a férovosť
 vyhodnocujúceho. 
 
-3. Optické skórovanie. Tu sa kombinujú vysokorýchlostné kamery alebo snímače s pokročilými algoritmami na detekciu zásahov. 
+\textbf{3. Optické skórovanie}. Tu sa kombinujú vysokorýchlostné kamery alebo snímače s pokročilými algoritmami na detekciu zásahov. 
 Po počiatočnom automatickom rozpoznaní zásahu nasleduje manuálna verifikácia pre zaistenie maximálnej presnosti vyhodnotenia.
 
 V dnešnom svete existuje množstvo strelných zbraní, preto bolo v športovej streľbe potrebné zaviesť
 rozličné kategórie a ich príslušné skórovacie systémy. Spomenieme si iba pár pre načrtnutie problematiky a 
 nepôjdeme do hĺbky vysvetlovania, iba ich charakteristiky aby čitateľ pochopil v čom sú odlišné.
 
-1. Olympijská puška
+\begin{itemize}
+  \item \textbf{Olympijská puška}
 
-\emph{Disciplíny:} 10 m vzduchová puška, 50 m trojičné polohy
+  \emph{Disciplíny:} 10 m vzduchová puška, 50 m trojičné polohy
 
-\emph{Skórovanie:} Desatinné bodovanie, každá rana až do hodnoty 10,9 bodu.
+  \emph{Skórovanie:} Desatinné bodovanie, každá rana až do hodnoty 10,9 bodu.
 
-2. Pištoľ
+  \item \textbf{Pištoľ}
 
-\emph{Disciplíny:} 10 m vzduchová pištoľ, 25 m rýchlopalná pištoľ, 50 m pištoľ
+  \emph{Disciplíny:} 10 m vzduchová pištoľ, 25 m rýchlopalná pištoľ, 50 m pištoľ
 
-\emph{Skórovanie:} Kombinácia celých a desatinných bodov podľa charakteru súťaže.
+  \emph{Skórovanie:} Kombinácia celých a desatinných bodov podľa charakteru súťaže.
 
-3. Broková streľba
+  \item \textbf{Broková streľba}
 
-\emph{Disciplíny:} trap, skeet, športové hlinenky, double trap
+  \emph{Disciplíny:} trap, skeet, športové hlinenky, double trap
 
-\emph{Skórovanie:} Systém zásah/prechyb – bod za každý úspešný zásah.
+  \emph{Skórovanie:} Systém zásah/prechyb, strelec získava bod za každý úspešný zásah.
 
-4. Silueta
+  \item \textbf{Silueta}
 
-\emph{Disciplíny:} pušková silueta, pištoľová silueta
+  \emph{Disciplíny:} pušková silueta, pištoľová silueta
 
-\emph{Skórovanie:} Body za zhadzovanie kovových siluetových terčov v tvare zvierat na rôznych vzdialenostiach.
+  \emph{Skórovanie:} Body za zhadzovanie kovových siluetových terčov v tvare zvierat na rôznych vzdialenostiach.
 
-5. Praktická streľba (IPSC/USPSA)
+  \item \textbf{Praktická streľba (IPSC/USPSA)}
 
-\emph{Disciplíny:} pištoľ, puška, brokovnica
+  \emph{Disciplíny:} pištoľ, puška, brokovnica
 
-\emph{Skórovanie:} Kombinácia rýchlosti a presnosti – terče rozdelené na zóny s rôznou bodovou hodnotou a 
-časový faktor ovplyvňuje konečný výsledok.
+  \emph{Skórovanie:} Kombinácia rýchlosti a presnosti, terče sú rozdelené na zóny s rôznou bodovou hodnotou a 
+  časový faktor ovplyvňuje konečný výsledok.
+\end{itemize}
 
-Práve tieto disciplíny boli zvolené pre poučenie čitateľa na základe toho, že majú odlišné disciplíny a 
+Práve tieto disciplíny boli zvolené pre poučenie čitateľa na základe toho, že majú odlišné terče a
 skórovania ~\cite{roberts2024understanding}. V tejto práci sa budeme venovať druhej spomenutej disiplíne - Pištoľ a konkrétne, streľbe zo vzduchovej pištole
 a následne vyhodnoteniu výsledkov.
 
@@ -154,7 +156,7 @@ Natívny výzor - PWA môžu mať kompletne nerozoznatelný vzhľad od klasický
 user interface-u, mali animáciu alebo nejaké intro pri spúštaní, dokonca sa môžu aj uzamknúť na predvolenú orientáciu, na šírku alebo výšku.
 
 \subsection{Neviditeľná vrstva}
-\label{sec:neviditeľnávrstva}
+\label{subsec:neviditeľnávrstva}
 Tak ako sme už načrtli, základom každej progresívnej webovej aplikácie je service worker. Pred tým ako sa vôbec service workeri objavili, kód
 bežal buď na strane serveru alebo na strane klienta, spolu so service workermi bola zavedená nová vrstva. Service worker je umiestnený za webovými
 prehlidačmi, tak ako je zobrazené na obrázku \ref{fig:obrazok1}. Service worker dokáže takto obsluhovať rôzne podnety zo všetkých stránok pod jeho
@@ -184,7 +186,7 @@ PHP umožňuje rýchly vývoj vďaka dynamickému typovaniu, jednoduchej a preh�
 pričom stále podporuje pokročilé paradigmy, ako je objektovo-orientované programovanie či funkcionálna štylizácia kódu. Okrem 
 priamočiareho generovania HTML dokáže PHP spracovávať REST API, vykonávať dávkové úlohy cez CLI, pracovať so súborovým systémom 
 či komunikovať so širokým spektrom databázových aj ne-SQL úložísk. Vďaka tomu sa PHP stalo jedným z pilierov back-endového 
-vývoja – od jednoduchých skriptov až po komplexné, enterprise-úrovňové riešenia s dôrazom na bezpečnosť, škálovateľnosť a 
+vývoja - od jednoduchých skriptov až po komplexné, enterprise-úrovňové riešenia s dôrazom na bezpečnosť, škálovateľnosť a 
 udržiavateľnosť.
 
 \subsection {Výhody jazyka PHP}
@@ -208,14 +210,132 @@ udržiavateľnosť.
 \subsection{Nevýhody jazyka PHP}
 Ako open-source jazyk je PHP k dispozícii v podobe čitateľného zdrojového kódu, to znamená, že každý môže študovať, 
 upravovať a vylepšovať jeho vnútornú logiku, no zároveň to útočníkom uľahčuje objaviť a zneužiť prípadné bezpečnostné 
-chyby. Ak sa nedodržujú osvedčené bezpečnostné postupy môže vzniknúť riziko ako napríklad SQL injection, XSS a CSRF 
-útoky \cite{tutorialspoint_php_introduction}. Zároveň v porovnaní s inými jazykmi ponúka PHP menej pokročilé mechanizmy pre 
+chyby. Ak sa nedodržujú osvedčené bezpečnostné postupy môže vzniknúť riziko ako (napr.: SQL injection, XSS a CSRF 
+útoky) \cite{tutorialspoint_php_introduction}. Zároveň v porovnaní s inými jazykmi ponúka PHP menej pokročilé mechanizmy pre 
 vykresľovanie a spracovanie výnimiek, toto všetko komplikuje odhalovanie a ľadenie chýb \cite{geeksforgeeks_php_vs_aspnet}.
 PHP kód vyžaduje prítomnosť webového servera ako napríklad Apache alebo Nginx s nainštalovaným interpretrerom, čo ho robí menej 
 flexibilným pre skriptovanie na príkazovom riadku \cite{tutorialspoint_php_introduction}.
 
+\subsection{REST API v PHP}
 
-\section {Databáza}
+REST (Representational State Transfer) je architektonický štýl pre navrhovanie webových služieb, ktorý kladie dôraz na 
+jednoduchú komunikáciu cez štandardné HTTP metódy bez ukladania stavu na strane servera. Základné princípy ako bezstavovosť 
+požiadaviek, možnosť cacheovania serverových odpovedí a jednotné rozhranie zdrojov umožňujú vytvárať vysoko dostupné a 
+škálovateľné služby \cite{redhat_rest_api}.
+
+V prostredí PHP možno REST API implementovať už bez akýchkoľvek externých knižníc, čím zostáva kód ľahký a prehľadný. 
+Typický tok spracovania požiadavku zahŕňa načítanie HTTP metódy a URI zo superglobálnych premenných, čítanie JSON tela 
+požiadavky a odoslanie odpovede formou JSON cez funkciu \texttt{json\_encode()} s hlavičkou 
+\texttt{Content-Type: application/json}.  
+Praktická implementácia REST API v čistom PHP zahŕňa:
+\begin{itemize}
+    \item identifikáciu metódy (\texttt{GET}, \texttt{POST}, \texttt{PUT}, \texttt{DELETE}) a cesty (\texttt{REQUEST\_URI}) pre 
+  smerovanie požiadaviek,  
+    \item spracovanie vstupných dát z JSON a ich validáciu pred ďaľším spracovaním,  
+    \item tvorbu odpovede s vhodnými HTTP stavovými kódmi (200, 201, 400, 404, 500) a kontrolu cacheovacích hlavičiek 
+  (\texttt{Cache-Control}),  
+    \item ochranu proti bežným útokom (SQL injection, XSS, CSRF) pomocou prepared statements a sanitizácie vstupov.
+\end{itemize}
+Frameworky ako Slim, Lumen, Laravel či Symfony prinášajú do vývoja REST API v PHP predpripravené nástroje pre spravovanie 
+routovania, spracovanie požiadaviek či odpovedí a validáciu vstupov. Vďaka nim vývojár už nemusí písať opakujúcu sa boilerplate 
+logiku, ale môže sa sústrediť na implementáciu dôležitej logiky. Tieto riešenia okrem využitia jednotných konvencií podporujú 
+aj jednoduchú integráciu bezpečnostných mechanizmov (napr. overovanie prístupu cez JWT), ponúkajú vlastné knižnice pre logovanie 
+a testovanie API a poskytujú detailnú dokumentáciu a komunitnú podporu. Výsledkom je rýchlejší postup vývoja, vyššia spoľahlivosť 
+kódu a ľahšia údržba celej aplikácie \cite{wpwebinfotech_simple_rest_php}.
+
+\subsection{Práca s databázami v PHP}
+
+Práca s relačnými databázami je kľúčovou súčasťou mnohých PHP aplikácií. PHP poskytuje dve hlavné rozhrania pre komunikáciu 
+s databázou MySQL a MariaDB, v práci budeme používať rozhranie MySQLi s univerzálnou knižnicou PDO (PHP Data Objects). 
+
+Používanie PDO sa odporúča predovšetkým kvôli jeho flexibilite - PDO podporuje viacero databázových systémov (napr. MySQL, PostgreSQL, SQLite) a 
+umožňuje bezpečné vykonávanie SQL dotazov pomocou prepared statements, čím významne znižuje riziko SQL 
+injection \cite{php_manual_pdo}.
+
+Pri vytváraní spojenia s databázou cez PDO sa najprv inicializuje nový objekt triedy PDO s odkazom na DSN 
+(Data Source Name) kde je následne definované používateľské meno s heslom tak ako to je možné vidieť v úkážke 
+kódu \ref{lst:pdo-create}.
+
+\begin{lstlisting}[,
+  caption={Vytvorenie spojenia s databázou pomocou PDO},
+  label={lst:pdo-create},
+  language=PHP,
+  style=code-listing
+]
+$dsn = 'mysql:host=localhost;dbname=strelnica;charset=utf8';
+$username = 'uzivatel';
+$password = 'heslo';
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+];
+$pdo = new PDO($dsn, $username, $password, $options);
+\end{lstlisting}
+
+V parametri PDO::ATTR\_ERRMODE sa nastavuje režim hlásenia chýb, čo uľahčuje hľadanie a následné ladenie týchto chýb pri 
+komunikácii s databázou.  
+
+Prepared statements predstavujú základný mechanizmus na prevenciu SQL injection útokov. Dotaz sa v nich najprv pripraví s 
+názvami parametrov tak ako môžeme vidieť v ukážke kódu \ref{lst:prepared-statements}.
+
+\begin{lstlisting}[,
+  caption={Prepared statements},
+  label={lst:prepared-statements},
+  language=PHP,
+  style=code-listing
+]
+$stmt = $pdo->prepare('SELECT * FROM users WHERE email = :email');
+$stmt->execute(['email' => $emailAdresa]);
+$user = $stmt->fetch();
+\end{lstlisting}
+
+Namiesto priameho vkladania používateľského vstupu do reťazca SQL sa hodnota parametra :email viaže až pri volaní 
+metódy execute(). Všetky špeciálne znaky sa pritom správne escapujú a to vedie k zamedzeniu vloženia škodlivého 
+kódu do dotazu \cite{owasp_sql_injection}. Podobným spôsobom sa pripravujú aj príkazy INSERT, UPDATE alebo DELETE.
+
+Transakcie umožňujú vykonať viacero súvisiacich operácií ako jeden logický celok. V PHP sa transakcia otvorí volaním 
+\$pdo->beginTransaction(), následne sa vykonajú jednotlivé príkazy, a až po úspešnom dokončení všetkých príkazov 
+sa transakcia potvrdí pomocou \$pdo->commit(). Táto praktika bola zavedená, aby v prípade chyby bolo možné transakciu 
+zrušiť volaním \$pdo->rollBack(). Tento prístup sa využíva napríklad pri registrácii nového používateľa, ktorá vyžaduje vloženie 
+údajov do viacerých tabuliek súčasne - teda ak by niektorý z príkazov zlyhal, transakcia sa zruší a databáza zostane v 
+nezmenenom stave - nebude zapísaný žiaden údaj.
+
+Bežné operácie s databázou zahŕňajú získavanie údajov a ich následné spracovanie v PHP. Na výber dát z tabuľky je možné použiť metódu 
+fetchAll() na získanie všetkých riadkov alebo fetch() na postupné načítanie z databázy riadok po riadku ako môžeme pozorovať v 
+ukážke \ref{lst:fetch-all}.
+
+\begin{lstlisting}[,
+  caption={Výber pomocou fetchAll()},
+  label={lst:fetch-all},
+  language=PHP,
+  style=code-listing
+]
+$stmt = $pdo->query('SELECT id, meno, skore FROM vysledky ORDER BY skore DESC');
+$vysledky = $stmt->fetchAll();
+foreach ($vysledky as $riadok) {
+    // ďaľšie príkazy...
+}
+\end{lstlisting}
+
+Analogicky pre úpravy údajov sa používajú príkazy INSERT, UPDATE a DELETE, pričom aj tu sa odporúčajú prepared 
+statements na zabezpečenie správnej sanitizácie vstupov.
+
+Z organizačného hľadiska je vhodné databázové prístupy oddeliť do vlastnej triedy alebo samostatného súboru 
+(napr. config.php a Object.class.php). V týchto súboroch sa často definuje metóda na vytvorenie PDO spojenia 
+a potom následne pre daný ``objekt'' metódy pre vykonanie dotazov ako môžeme pozorovať na následovných ukážkach X a Y.
+
+% Ukážka
+
+Týmto spôsobom sa minimalizuje opakovanie kódu - teda pri každom dotaze sa iba zavolá Database::query() s 
+príslušným SQL a parametrami, zatiaľ čo samotné pripojenie sa spravuje len raz.
+
+Optimalizácia výkonu databázových dotazov sa zvyčajne rieši správnym indexovaním tabuliek. Primárne kľúče, jedinečné 
+indexy a indexy na často filtrovaných stĺpcoch (napr. email, timestamp) zaručujú rýchle vyhľadávanie.
+
+Použitie PDO namiesto MySQLi prináša aj ďalšiu výhodu, ak by sa v budúcnosti rozhodlo migrovať na iný databázový systém - väčšina 
+kódu zostane bežať bez zmien, stačí aktualizovať DSN a prípadne niektoré špecifické nastavenia. Celkovo spracovanie prístupu k 
+databáze v PHP vyžaduje kombináciu bezpečnostných postupov (prepared statements, validácia vstupov), správu chýb cez výnimky a 
+optimalizáciu dotazov, čím sa zabezpečí spoľahlivosť a škálovateľnosť celého riešenia \cite{php_manual_pdo}.
 
 
 \section{OpenCV}
