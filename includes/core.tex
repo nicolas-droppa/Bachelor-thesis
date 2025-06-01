@@ -339,6 +339,7 @@ class Object {
       return $stmt->fetch(PDO::FETCH_ASSOC);
   }
   // ďaľšie funkcie
+}
 \end{lstlisting}
 
 Týmto spôsobom sa minimalizuje opakovanie kódu - teda pri každom dotaze sa iba zavolá Database::query() s 
@@ -386,6 +387,106 @@ ako je detekcia alebo klasifikácia objektov.
 Kreslenie tvarov a textu na obrázky je užitočné na vizualizáciu údajov alebo anotácií v aplikáciách počítačového 
 videnia. OpenCV poskytuje rôzne funkcie na kreslenie základných tvarov ako sú čiary(cv2.line), obdĺžniky(cv2.rectangle) 
 a kruhy(cv2.circle), taktiež umožňuje pridávanie textu(cv2.puText) do obrázkov.
+
+
+\section{Analýza existujúcich riešení}
+V práci sa zameriame na podrobnú analýzu existujúcich riešení na vyhodnocovanie zásahov pri športovej streľbe. 
+Najprv objasníme, prečo je dôležité ponúknuť cenovo dostupné a efektívne nástroje pre kluby či jednotlivcov, ktorí 
+nemajú možnosť používať drahé elektronické terče či iné pokročilé zariadenia. Potom predstavíme konkrétne 
+príklady aplikácií a softvérov, ktoré dnes umožňujú digitalizovať a vyhodnocovať papierové terče pomocou bežného 
+smartfónu, tabletu či skenera.
+
+\subsection{Motivácia}
+Nie každý strelecký klub alebo individuálny strelec má finančnú možnosť investovať do elektronických terčov či 
+pokročilých video-optických systémov. Pokiaľ sa zaznamenávanie zásahov vedie manuálne (papierové prehľadové terče), 
+existujú softvérové nástroje, ktoré pomocou telefónu alebo skenera dokážu tieto 
+stredné body zásahov digitalizovať.
+
+\subsection{Príklady existujúcich aplikácií}
+Cieľom tejto analýzy je nielen zhrnúť hlavné funkcie a vlastnosti existujúcich riešení, 
+ale aj identifikovať ich silné a slabé stránky pre následné zlepšenie. Zároveň bude čitateľ oboznámený s tým, aké 
+riešenia sú dnes na trhu dostupné a kde sa nachádzajú potenciálne medzery.
+
+\subsubsection{TargetScan - Pistol \& Rifle}
+Aplikácia je určená výhradne pre mobilné zariadenia (iOS aj Android) a nie je dostupná na počítači ani pre spracovanie skenovaných 
+fotografií terča z galérie. Aplikácia vyhodnocuje pomocou algoritmu automaticky vrátanie INNER hodnôt a desatinného skórovania. Aplikácia
+disponuje automatickou detekciou dierok v terči s možnosťou posúvania jednotlivých zásahov v prípade chybnej detekcie \cite{TargetScanApp}.
+
+Aplikácia taktiež disponuje výpočtom stredného bodu nárazu, vertikalnou a horizontálnou eleváciou, priemerný polomer skupiny a 
+maximálna vzdialenosť medzi dvoma najvzdialenejšími bodmi \cite{TargetScanApp}.
+
+\begin{itemize}
+  \item Výhody aplikácie:
+  
+  Zobrazenie ``Potential Score'' - ukazovateľ, o koľko bodov by sa výsledok zlepšil, ak by strelecká skupina bola presunutá presne 
+  do stredu terča.
+  ``Heat map'' zobrazujúca vzory odchýlok v dlhodobom horizonte.
+  Graf vývoja skóre a rozptylu naprieč časom.
+  Porovnanie viacerých sedení s cieľom sledovať progres - napríklad skóre za posledné mesiace \cite{TargetScanApp}.
+
+  \item Nevýhody aplikácie:
+
+  Iba mobilná verzia - nie je možné vyhodnocovať skeny terčov v počítači.
+  Cena aplikácie je 20 €, čo môže byť pre niektorých používateľov vyššia investícia.
+  Zastaralý dizajn, ktorý neodpovedá moderným štandardom používateľského rozhrania.
+  Obmedzovanie na základné disciplýni - v aplikácii sú možnosti ďaľších poplatkov, ktoré odomknú pokročilé disciplíny.
+  Aj keď funkcia „Eagle Eye“ umožňuje posun zásahu o drobné hodnoty, pri veľmi sústredenej skupine môže byť ťažké rozhodnúť, 
+  ktorú dierku presne posunúť, ak sú na fotografii takmer zlepené \cite{TargetScanApp}.
+\end{itemize}
+
+\subsubsection{Blackhole-App (``Scan Targets'')}
+Aplikácia je určená výhradne pre mobilné zariadenia (iOS aj Android) a nie je dostupná na počítači ani pre spracovanie skenovaných 
+fotografií terča z galérie. Pomocou zabudovaného optického vodováhy pomáha nasnímať terč kolmo a stabilne. Po nasnímaní aplikácia 
+automaticky vyhodnotí zásahy a zobrazí výsledné hodnoty spolu s grafickou vizualizáciou zásahov. 
+
+Používateľ môže po vyhodnotení manuálne pridávať, upravovať alebo mazať jednotlivé zásahy. Výsledky je možné prezerať a porovnávať 
+s predchádzajúcimi sedeniami, taktiež je možné exportovať výsledky do PDF \cite{BlackholeApp}.
+
+\begin{itemize}
+  \item Výhody aplikácie:
+
+  Automatické vyhodnotenie zásahov na desatinu prstenca** v priebehu niekoľkých sekúnd po nasnímaní terča.
+  Možnosť manuálnej korekcie, po automatickom spracovaní je možné pridať, upraviť alebo odstrániť zásah v prípade nepresnej detekcie.
+  Záznamník s podporou grafickej analýzy (rozptyl, stredný bod impaktu) a porovnávaním viacerých streleckých sedení.
+  Export do PDF \cite{BlackholeApp}.
+
+  \item Nevýhody aplikácie:
+
+  Iba mobilná verzia - nie je možné vyhodnocovať skeny terčov v počítači.
+  V aplikácii sú možnosti ďaľších poplatkov, ktoré odomykajú mnohé zo spomenutých funkcionalít.
+  Občasné pády či zdržanie aplikácie pri spracovaní veľkého počtu zásahov, čo potvrdzujú aj recenzie používateľov.
+  Neintuitívne rozhranie \cite{BlackholeApp}.
+\end{itemize}
+
+\subsubsection{AccuShoot}
+Aplikácia je dostupná pre mobilné zariadenia (iOS aj Android) a poskytuje skórovanie terčov tak ako v reálnom čase, tak aj z fotografií 
+terčov. Umožňuje okamžité vyhodnotenie zásahov pomocou funkcie Real-time Target Scoring. Aplikácia taktiež poskytuje detailné vedenie 
+záznamov, pokročilú analýzu skupín, predikciu výkonu cez desktopovú aplikáciu a sociálne rebríčky na porovnávanie s inými strelcami. 
+K dispozícii je aj funkcia picture-based sessions pre nahrávanie fotografií starších terčov a ich digitalizáciu do histórie streleckých 
+výsledkov \cite{AccuShootApp}.
+
+\begin{itemize}
+  \item Výhody aplikácie:
+
+  Real-time Target Scoring umožňuje okamžité vyhodnotenie zásahov bez nutnosti chodiť k terču.  
+  Pokročilá analýza skupín - automatické výpočty pre hodnotenie rozptylu, stredného bodu impaktu a ďalších metrík.
+  Prostredníctvom bezplatnej desktopovej aplikácie AccuShoot Desktop App je možné predikovať výkon na základe dát z minulosti. 
+  Moderný dizajn a intuitívne rozhranie.
+  Sociálne rebríčky pre porovnanie výkonu s inými strelcami. 
+  Analýza starších streleckých terčov cez nahratie fotografie do desktopovej aplikácie \cite{AccuShootApp}.
+
+  \item Nevýhody aplikácie:
+
+  V aplikácii sú možnosti ďaľších poplatkov, ktoré odomykajú mnohé zo spomenutých funkcionalít.
+  Nutnosť internetového pripojenia, synchronizácia dát a prístup k sociálnym rebríčkom vyžaduje stabilné pripojenie, 
+  čo môže obmedziť použitie v odľahlých lokalitách. 
+  Obmedzená presnosť pri špeciálnych terčoch: niektoré neštandardné terče alebo podmienky nemusí aplikácia optimálne podporovať, 
+  výsledky môžu byť menej presné v porovnaní s desktopovou analýzou \cite{AccuShootApp}.
+\end{itemize}
+
+
+\section{Návrh riešenia}
+
 \iffalse
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                            %%
