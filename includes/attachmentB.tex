@@ -1,14 +1,15 @@
-% Dlhšie kódy, prípadne kompletné programy vypisujeme do dodatkov práce. Nasledujúci program v~jazyku Python vygeneruje súbor \verb|thesis.tex|, ktorý je funkčne
-% totožný s~hlavným súborom tohto dokumentu.
-% Stačí vyplniť prehľadný formulár pri volaní funkcie \verb|generate_thesis_tex| na konci kódu
-% a~získate hlavný súbor vašej práce.
+Nasledujúci skript zabezpečuje jednorazové nadviazanie spojenia s databázou pomocou rozhrania PHP Data Objects (PDO), pričom je 
+ošetrený aj prípadný výskyt chýb. V prípade úspešného pripojenia sa vráti inštancia objektu PDO, ktorú možno ďalej použiť na 
+vykonávanie databázových operácií. Táto funkcionalita je umiestnená v súbore config.php, čím sa zabezpečí, že pripojenie k 
+databáze sa vytvára len raz a následne je možné pracovať s databázou prostredníctvom metódy Database::query() ako môžeme
+vidieť v podkapitole \ref{subsec:pracasdbvphp} bez nutnosti opätovného pripájania sa.
 
-% \lstinputlisting[
-%   label={lst:sublime},
-%   caption={Ukážka výpisu kódu programu načítaného z~externého súboru pomocou makra \texttt{\textbackslash lstinputlisting}},
-%   language=python,
-%   style=\detokenize{code-listing},
-%   %basicstyle=\normalfont\ttfamily,
-%   %showstringspaces=false
-% ]{\detokenize{includes/listings/generate_thesis_tex.py}}
-% %\detokenize solves the problem of the conflict with babel and the Slovak hyphenation rule concerning the dash character.
+\lstinputlisting[
+    label={lst:pdo-connection},
+    caption={Pripojenie k databáze pomocou PDO},
+    language=PHP,
+    style=\detokenize{code-listing},
+    %basicstyle=\normalfont\ttfamily,
+    %showstringspaces=false
+]{\detokenize{includes/listings/db_connection_pdo.php}}
+%\detokenize solves the problem of the conflict with babel and the Slovak hyphenation rule concerning the dash character.

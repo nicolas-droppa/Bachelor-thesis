@@ -244,6 +244,7 @@ a testovanie API a poskytujú detailnú dokumentáciu a komunitnú podporu. Výs
 kódu a ľahšia údržba celej aplikácie \cite{wpwebinfotech_simple_rest_php}.
 
 \subsection{Práca s databázami v PHP}
+\label{subsec:pracasdbvphp}
 
 Práca s relačnými databázami je kľúčovou súčasťou mnohých PHP aplikácií. PHP poskytuje dve hlavné rozhrania pre komunikáciu 
 s databázou MySQL a MariaDB, v práci budeme používať rozhranie MySQLi s univerzálnou knižnicou PDO (PHP Data Objects). 
@@ -317,14 +318,28 @@ foreach ($vysledky as $riadok) {
 }
 \end{lstlisting}
 
-Analogicky pre úpravy údajov sa používajú príkazy INSERT, UPDATE a DELETE, pričom aj tu sa odporúčajú prepared 
-statements na zabezpečenie správnej sanitizácie vstupov.
-
 Z organizačného hľadiska je vhodné databázové prístupy oddeliť do vlastnej triedy alebo samostatného súboru 
 (napr. config.php a Object.class.php). V týchto súboroch sa často definuje metóda na vytvorenie PDO spojenia 
-a potom následne pre daný ``objekt'' metódy pre vykonanie dotazov ako môžeme pozorovať na následovných ukážkach X a Y.
+a potom následne pre daný ``objekt'' metódy pre vykonanie dotazov ako môžeme pozorovať na následovných ukážkach 
+\ref{lst:pdo-connection} a \ref{lst:obj-class-php}.
 
-% Ukážka
+\begin{lstlisting}[,
+  caption={Ukážka súboru Object.class.php},
+  label={lst:obj-class-php},
+  language=PHP,
+  style=code-listing
+]
+class Object {
+  // deklarácia db a conštruktor
+
+  public function show($id) { // získanie jedného záznamu
+      $stmt = $this->db->prepare("SELECT * FROM objects WHERE id = :id");
+      $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+      $stmt->execute();
+      return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+  // ďaľšie funkcie
+\end{lstlisting}
 
 Týmto spôsobom sa minimalizuje opakovanie kódu - teda pri každom dotaze sa iba zavolá Database::query() s 
 príslušným SQL a parametrami, zatiaľ čo samotné pripojenie sa spravuje len raz.
