@@ -355,6 +355,7 @@ optimalizáciu dotazov, čím sa zabezpečí spoľahlivosť a škálovateľnosť
 
 
 \section{OpenCV}
+\label{sec:opencv}
 OpenCV je skratka pre Open Source Computer Vision a je to knižnica funkcií, ktoré sú užitočné pri programovaní 
 aplikácií počítačového videnia v reálnom čase. Termín počítačové videnie sa používa pre subjekt, ktorý vykonáva 
 analýzu digitálnych obrázkov a videí pomocou počítačového programu. Počítačové videnie je dôležitou súčasťou 
@@ -486,6 +487,18 @@ výsledkov \cite{AccuShootApp}.
 
 
 \section{Návrh riešenia}
+Témou práce je vytvoriť aplikáciu, ktorá z fotografie terča transformuje perspektívu a pripravý plátno pre používateľa, 
+tak aby mohol potvrdiť zásahy v terči a následne mu boli vygenerované výsledky. V tejto kapitole sa čitateľ dozvie aké technológie
+budeme používať a ako bude navrhnutá celá aplikácia za pomoci týchto technológií.
+
+Na základe prieskumu sme sa rozhodli použiť JavaScript, ako bolo ukázané v teoretickej časti, pretože podporuje knižnicu 
+OpenCV (viď podkapitolu \ref{sec:opencv}) a beží vo všetkých moderných prehliadačoch bez potreby inštalácie ďalšieho softvéru. 
+Okrem toho má obrovskú komunitu, množstvo návodov, tutoriálov a praktických príkladov, vrátane ukážok použitia OpenCV.js. 
+Na prístup k databáze a jej správu využijeme PHP a MySQL.
+
+\subsection{Špecifikácia požiadaviek}
+V tejto časti zhrnieme základné požiadavky na navrhovanú aplikáciu, ktoré zabezpečia správnu funkčnosť a použiteľnosť.
+
 
 \iffalse
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
