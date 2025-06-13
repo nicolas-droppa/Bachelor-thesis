@@ -652,7 +652,8 @@ V tejto časti zhrnieme základné požiadavky na navrhovanú aplikáciu, ktoré
   \item \textbf{Zachytenie terča} - nahratie obrázkov z galérie.
   \item \textbf{Automatické vyhodnocovanie terča} - detekcia rohov a stredu terča, s možnosťou manuálnej úpravy v prípade chybnej detekcie.
   \item \textbf{Manuálny výber bodov} - Manuálne zakliknutie výstrelov na terči.
-  \item \textbf{Výpočet metrík} - najlepší a najhorší výstrel, priemerné skóre, mean radius, radius variance, consistency (MAD), windage, elevation, max spread a historické štatistiky pre sledovanie progresu.
+  \item \textbf{Výpočet metrík} - najlepší a najhorší výstrel, priemerné skóre, mean radius, radius variance, consistency (MAD), windage, elevation, max 
+  spread a historické štatistiky pre sledovanie progresu.
   \item \textbf{Vizualizáciu výsledkov} - grafy vývoja skóre, heat mapy rozptylu, porovnanie s predchádzajúcimi sedeními.
   \item \textbf{Ukladanie dát} - ukladanie v databáze.
 \end{itemize}
@@ -665,6 +666,68 @@ V tejto časti zhrnieme základné požiadavky na navrhovanú aplikáciu, ktoré
   \item \textbf{Používateľské rozhranie (UX)} - intuitívne rozhranie.
   \item \textbf{Škálovateľnosť} - možnosť rozšírenia o nové metriky bez zásadných zmien architektúry.
 \end{itemize}
+
+
+\subsection{Diagramy}
+
+\subsubsection{Diagram prípadov použitia}
+
+Na obr.~\ref{fig:obrazok3} je znázornený diagram prípadov použitia, ktorý popisuje hlavné interakcie medzi používateľom (strelec) a 
+systémom aplikácie. Primárnym aktérom je \emph{Používateľ}, ktorý vykonáva nasledovné prípady použitia:
+
+\begin{itemize}
+  \item \textbf{Nahratie fotografie terča} - vstupný krok, pri ktorom používateľ nahraje snímku terča z galérie. Tento prípad použitia \emph{zahŕňa} (include) 
+  \emph{Zobrazenie vyhodnotenia} a \emph{Detekciu zásahov}.
+  \item \textbf{Detekcia zásahov} - automatický výpočet polohy a skóre zásahov. Ak detekcia nevyhovuje, rozširuje sa (extend) o \emph{Manuálnu úpravu detekcie} 
+  alebo \emph{Vyklikanie výstrelov}, ktoré umožňujú používateľovi doladiť alebo označiť chýbajúce zásahy.
+  \item \textbf{Zobrazenie vyhodnotenia} - okamžitá vizualizácia výsledkov a metrík po spracovaní snímky.
+  \item \textbf{Prehľad výkonov} - samostatný prípad použitia umožňujúci pristupovať k histórii všetkých predchádzajúcich sedení a štatistík.
+\end{itemize}
+
+Diagram využíva spojky \emph{include} na označenie povinných krokov, ktoré sa vždy vykonajú (napr. zobrazenie výsledkov po nahratí fotografie) a spojky 
+\emph{extend} pre voliteľné, situáciu-podmienené akcie (napr. manuálna korekcia detekcie zásahov). Takto rozdelené logické bloky uľahčujú pochopenie, 
+ktoré funkcie sú nevyhnutné pre základný tok, a ktoré sa aktivujú iba v prípade potreby doplnenia či opravy automatizovaných procesov.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{img/user-case.pdf}
+  \caption{Diagram prípadov použitia pre aplikáciu}
+  \label{fig:obrazok3}
+\end{figure}
+
+\subsubsection{ER diagram}
+
+Na obr.~\ref{fig:er_diagram} je znázornený ER diagram, ktorý obsahuje entity, ich atribúty a vzťahy v navrhovanej aplikácii na hodnotenie strelby
+na terč. Diagram pozostáva z dvoch hlavných entít \emph{User} a \emph{Session\_Stats}, medzi ktorými je definovaný many-to-many vzťah.
+
+\begin{itemize}
+  \item \textbf{User} (entita) - predstavuje registrovaného používateľa aplikácie.  
+    Atribúty:  
+    \begin{itemize}
+      \item \texttt{id (PK)} - primárny kľúč  
+      \item \texttt{name} - meno používateľa  
+      \item \texttt{email} - e-mailová adresa (index)  
+      \item \texttt{password} - heslo (hash)  
+      \item \texttt{created\_at} - dátum registrácie  
+    \end{itemize}
+
+  \item \textbf{Session\_Stats} (entita) – predstavuje jednu streleckú sériu so súhrnnými metrikami.  
+    Atribúty:  
+    \begin{itemize}
+      \item \texttt{id (PK)} - primárny kľúč  
+      \item \texttt{recorded\_at} - dátum a čas záznamu  
+      \item \texttt{total\_shots}, \texttt{best\_score}, \texttt{worst\_score}, \texttt{average\_score}  
+      \item \texttt{mean\_radius\_mm}, \texttt{variance\_mm2}, \texttt{consistency\_mm}  
+      \item \texttt{elevation\_mm}, \texttt{windage\_mm}, \texttt{max\_spread\_mm}  
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/er-diagram.pdf}
+  \caption{ER diagram - entity \emph{User}, \emph{Session\_Stats}}
+  \label{fig:er_diagram}
+\end{figure}
 
 
 \iffalse
