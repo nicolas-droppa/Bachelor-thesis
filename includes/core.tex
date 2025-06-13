@@ -81,6 +81,48 @@ Práve tieto disciplíny boli zvolené pre poučenie čitateľa na základe toho
 skórovania ~\cite{roberts2024understanding}. V tejto práci sa budeme venovať druhej spomenutej disiplíne - Pištoľ a konkrétne, streľbe zo vzduchovej pištole
 a následne vyhodnoteniu výsledkov.
 
+\subsection{Vyhodnocované metriky}
+V tejto podkapitole predstavíme základné metriky, ktoré sa bežne používajú na kvantifikáciu kvality streleckého výkonu.
+
+\begin{itemize}
+  \item \textbf{Presnosť (Accuracy)}  
+    Vyjadruje priemerný skóre na každý výstrel. Čím vyššia presnosť, tým bližšie zásahy k stredu terča.  
+    \cite{TargetShootingAppMetrics}
+
+  \item \textbf{Stredný polomer (Mean Radius)}  
+    Priemerná vzdialenosť všetkých zásahov od stredu terča. Čím menší stredný polomer, tým tesnejšie sú skupiny.  
+    \cite{ISSFTargetPlot}
+
+  \item \textbf{Variancia rozptylu (Dispersion Variance)}  
+    Štatistická variancia vzdialeností od stredu - ukazuje rozptyl zásahov v rámci série.  
+    \cite{RedditWRIPJA2C}
+
+  \item \textbf{Skupinovanie (Grouping)}  
+    Počet zásahov v rámci pevného kružnicového priemeru (napr. 10 cm). Používa sa na porovnanie tesnosti rôznych streleckých sérií.  
+    \cite{EncryptedTBN0GC}
+
+  \item \textbf{Windage (Horizontálny odklon)}  
+    Priemerné horizontálne posunutie skupiny vzhľadom na stred - pomáha identifikovať systémový odklon doľava alebo doprava.  
+    \cite{EncryptedTBN0GC}
+
+  \item \textbf{Elevation (Vertikálny odklon)}  
+    Priemerné vertikálne posunutie skupiny vzhľadom na stred - ukazuje, či strelec systematicky strieľa vyššie alebo nižšie.  
+    \cite{EncryptedTBN0GC}
+
+  \item \textbf{Štandardná odchýlka polomeru (Radius Standard Deviation)}  
+    Meria jednotnosť rozptylu zásahov okolo stredného bodu, doplňuje metriky variancie a mean radius.  
+    \cite{TargetShootingAppMetrics}
+
+  \item \textbf{Index konzistencie (Consistency Index)}  
+    Pomerný ukazovateľ, definovaný ako podiel medzi priemerným skóre a štandardnou odchýlkou skóre, hodnotí stabilitu výkonu v čase.  
+    \cite{TargetShootingAppMetrics}
+
+  \item \textbf{Čas medzi výstrelmi (Shot Interval)}  
+    Priemerné časové rozostupy medzi jednotlivými výstrelmi - dôležité pre analýzu uvoľnenia spúšte a rytmu streľby.  
+    \cite{TargetShootingAppMetrics}
+
+\end{itemize}
+
 
 \section {Programovací jazyk JavaScript}
 JavaScript je objektovo orientovaný, vysokoúrovňový programovací jazyk. Narozdiel od kompilovaných jazykov kde
@@ -460,11 +502,16 @@ s predchádzajúcimi sedeniami, taktiež je možné exportovať výsledky do PDF
 \end{itemize}
 
 \subsubsection{AccuShoot}
-Aplikácia je dostupná pre mobilné zariadenia (iOS aj Android) a poskytuje skórovanie terčov tak ako v reálnom čase, tak aj z fotografií 
-terčov. Umožňuje okamžité vyhodnotenie zásahov pomocou funkcie Real-time Target Scoring. Aplikácia taktiež poskytuje detailné vedenie 
-záznamov, pokročilú analýzu skupín, predikciu výkonu cez desktopovú aplikáciu a sociálne rebríčky na porovnávanie s inými strelcami. 
-K dispozícii je aj funkcia picture-based sessions pre nahrávanie fotografií starších terčov a ich digitalizáciu do histórie streleckých 
-výsledkov \cite{AccuShootApp}.
+Aplikácia je dostupná pre mobilné zariadenia (iOS aj Android) a poskytuje skórovanie terčov tak v reálnom čase, ako aj z fotografií terčov. 
+Vďaka funkcii \emph{Real-time Target Scoring} môže strelec sledovať výsledky každého zásahu okamžite bez potreby vracať sa k terču, 
+čo výrazne zvyšuje komfort a dynamiku tréningu. Pre pokročilú analýzu sú k dispozícii detailné metriky rozptylu, stredného bodu impaktu, 
+priemerného polomeru skupiny a maximalnej vzdialenosti medzi najvzdialenejšími zásahmi.  Aplikácia ponúka aj prehľadnú históriu všetkých 
+streleckých sedení vrátane interaktívnych grafov vývoja skóre a skupinových analýz, ktoré umožňujú jednoduché sledovanie osobného progresu. 
+Pomocou desktopovej aplikácie \emph{AccuShoot Desktop App} je navyše možné vykonať predikciu budúceho výkonu na základe historických dát a 
+exportovať podrobné reporty vo formáte PDF alebo CSV. Sociálne rebríčky a funkcia \emph{community challenges} umožňujú porovnávať sa s ostatnými 
+používateľmi, zdieľať výsledky a motivovať sa prostredníctvom súťaživého prostredia. Funkcia \emph{picture-based sessions} navyše podporuje 
+digitalizáciu starších terčov – stačí nahrať fotografiu, a aplikácia automaticky deteguje a vyhodnotí zásahy vrátane možnosti manuálnej 
+korekcie \cite{AccuShootApp}.
 
 \begin{itemize}
   \item Výhody aplikácie:
@@ -485,6 +532,72 @@ výsledkov \cite{AccuShootApp}.
   výsledky môžu byť menej presné v porovnaní s desktopovou analýzou \cite{AccuShootApp}.
 \end{itemize}
 
+\subsubsection{Zhrnutie funkcionality dostupných rieŠení}
+V nasledujúcej podkapitole predstavíme prehľad základných funkcií jednotlivých dostupných riešení formou tabuľky. Táto tabuľka 
+umožní rýchlu orientáciu a porovnanie kľúčových vlastností bez potreby prechádzať rozsiahlymi opisnými textami. V ľavom stĺpci 
+bude uvedený názov riešenia, v ďalších stĺpcoch sa čitateľ prehľadne dozvie o podpore danej funckie.
+
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Funkcia / Vlastnosť} 
+      & \textbf{TargetScan} 
+      & \textbf{Blackhole-App} 
+      & \textbf{AccuShoot} \\
+    \midrule
+    Platforma 
+      & Áno 
+      & Áno 
+      & Áno \\
+    Živé snímanie terča 
+      & Áno 
+      & Áno 
+      & Áno \\
+    Fotky z galérie 
+      & Nie 
+      & Nie 
+      & Áno \\
+    Automatické skórovanie 
+      & Áno 
+      & Áno 
+      & Áno \\
+    Manuálna korekcia zásahov 
+      & Áno 
+      & Áno 
+      & Nie \\
+    Pokročilé analytické metriky 
+      & Áno 
+      & Áno 
+      & Áno \\
+    História výkonou sedení
+      & Áno 
+      & Áno 
+      & Áno \\
+    Export / synchronizácia 
+      & Nie 
+      & Áno 
+      & Áno \\
+    Cena / model platby 
+      & jednorazovo 
+      & in-app poplatky 
+      & in-app poplatky \\
+    UI - moderné / intuitívne 
+      & Nie 
+      & Nie 
+      & Áno \\
+    Obmedzenia 
+      & len mobil 
+      & len mobil 
+      & potreba internetu \\
+    \bottomrule
+  \end{tabular}
+  \caption{Porovnanie hlavných funkcií aplikácií}
+  \label{tab:porovnanie-fajky-krizik}
+\end{table}
+
+
 
 \section{Návrh riešenia}
 Témou práce je vytvoriť aplikáciu, ktorá z fotografie terča transformuje perspektívu a pripravý plátno pre používateľa, 
@@ -496,8 +609,50 @@ OpenCV (viď podkapitolu \ref{sec:opencv}) a beží vo všetkých moderných pre
 Okrem toho má obrovskú komunitu, množstvo návodov, tutoriálov a praktických príkladov, vrátane ukážok použitia OpenCV.js. 
 Na prístup k databáze a jej správu využijeme PHP a MySQL.
 
+\subsection{Voľba hodnotiacich parametrov pre aplikáciu}
+
+Na základe analýzy potrieb používateľov a dostupných metrik sme pre vyhodnotenie streleckého výkonu v aplikácii vybrali nasledujúce parametre. 
+
+\textit{Najlepší výstrel} označuje zásah s najvyšším bodovým hodnotením v rámci série, čím sa identifikuje moment maximálnej presnosti
+
+\textit{najhorší výstrel} je zásah s najnižším skóre, ktorý poukazuje na najväčšiu odchýlku od ideálneho výstrelu
+
+\textit{priemerné skóre} sumarizuje celkovú výkonnosť série a slúži ako základná metrika konzistentnosti
+
+\textit{mean radius} (stredný polomer) meria priemernú vzdialenosť všetkých zásahov od stredu terča a charakterizuje tesnosť skupiny
+
+\textit{radius variance} (variancia polomeru) kvantifikuje rozptyl týchto vzdialeností a odhaľuje nerovnomernosť rozloženia zásahov
+
+\textit{consistency (MAD)} využíva medián absolútnych odchýlok pre odhad odolnosti voči extrémom a poskytuje robustný ukazovateľ stability výkonu
+
+\textit{elevation} a \textit{windage} sledujú systémové vertikálne a horizontálne posunutie skupiny voči stredu, čím odhaľujú opakované odklony dohora, 
+nadol, doľava či doprava
+
+\textit{max spread} (maximálny rozptyl medzi dvoma výstrelmi) identifikuje najväčší možný rozmer skupiny v danej sérii, čo je kľúčové pre hodnotenie 
+extrémnych odchýlok. Tieto parametre spoločne pokrývajú aspekty presnosti, konzistencie i systematických chýb a umožňujú komplexné vyhodnotenie streleckého 
+výkonu.
+
 \subsection{Špecifikácia požiadaviek}
 V tejto časti zhrnieme základné požiadavky na navrhovanú aplikáciu, ktoré zabezpečia správnu funkčnosť a použiteľnosť.
+
+\paragraph{Funkčné požiadavky}
+\begin{itemize}
+  \item \textbf{Zachytenie terča} - nahratie obrázkov z galérie.
+  \item \textbf{Automatické vyhodnocovanie terča} - detekcia rohov a stredu terča, s možnosťou manuálnej úpravy v prípade chybnej detekcie.
+  \item \textbf{Manuálny výber bodov} - Manuálne zakliknutie výstrelov na terči.
+  \item \textbf{Výpočet metrík} - najlepší a najhorší výstrel, priemerné skóre, mean radius, radius variance, consistency (MAD), windage, elevation, max spread a historické štatistiky pre sledovanie progresu.
+  \item \textbf{Vizualizáciu výsledkov} - grafy vývoja skóre, heat mapy rozptylu, porovnanie s predchádzajúcimi sedeními.
+  \item \textbf{Ukladanie dát} - ukladanie v databáze.
+\end{itemize}
+
+\paragraph{Nefunkčné požiadavky}
+\begin{itemize}
+  \item \textbf{Platformová nezávislosť} - podpora webového rozhrania pre desktop a mobilné telefóny.
+  \item \textbf{Výkonnosť} - spracovanie jednej snímky a zobrazenie výsledkov do 10 sekúnd.
+  \item \textbf{Bezpečnosť a ochrana dát} - šifrovanie uložených záznamov, zabezpečené prihlasovanie.
+  \item \textbf{Používateľské rozhranie (UX)} - intuitívne rozhranie.
+  \item \textbf{Škálovateľnosť} - možnosť rozšírenia o nové metriky bez zásadných zmien architektúry.
+\end{itemize}
 
 
 \iffalse
