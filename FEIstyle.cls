@@ -194,6 +194,16 @@
     framexrightmargin=1pt
 }
 
+\lstdefinelanguage{JavaScript}{
+    keywords={typeof,new,true,false,catch,function,return,null,switch,var,if,in,while,do,else,case,break},
+    keywordstyle=\color{codemagenta}\bfseries,
+    ndkeywords={class,export,boolean,throw,implements,import,this},
+    ndkeywordstyle=\color{codegray}\bfseries,
+    comment=[l]{//}, morecomment=[s]{/*}{*/}, commentstyle=\color{codegreen}\ttfamily,
+    stringstyle=\color{codeviolet}\ttfamily,
+    morestring=[b]',morestring=[b]"
+}
+
 \newboolean{isThesis}
 
 \IfEqCase*{\isThesis}{

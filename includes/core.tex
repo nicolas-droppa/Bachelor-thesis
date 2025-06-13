@@ -669,9 +669,11 @@ V tejto časti zhrnieme základné požiadavky na navrhovanú aplikáciu, ktoré
 
 
 \subsection{Diagramy}
+V tejto kapitole budeme vytvárať diagramy pre popísanie funcionality našej aplikácie. Pre najzákladnejší opis toho, čo aplikácia dovoluje
+navrhneme diagram prípadov použitia. Následne budeme vytvárať entitno relačný diagram, ktorý bude opisovať to aké stĺpce a polia bude
+databáza obsahovať.
 
 \subsubsection{Diagram prípadov použitia}
-
 Na obr.~\ref{fig:obrazok3} je znázornený diagram prípadov použitia, ktorý popisuje hlavné interakcie medzi používateľom (strelec) a 
 systémom aplikácie. Primárnym aktérom je \emph{Používateľ}, ktorý vykonáva nasledovné prípady použitia:
 
@@ -729,6 +731,115 @@ na terč. Diagram pozostáva z dvoch hlavných entít \emph{User} a \emph{Sessio
   \label{fig:er_diagram}
 \end{figure}
 
+
+\section{Implementácia riešenia}
+Po navrhnutí riešenia celej práce a vyčlenení pravidiel a podmienok pre správne fungovanie sme začali s implementáciou. Táto kapitola bude rozdelená
+do niekoľkých častí, ako prvú veľkú časť sme zvolili nahratie obrázku terča pre vyhodnotenie. Pre následné umožnenie používateľovi vyklikať výsledky
+pre vyhodnotenie sme najprv museli zabezpečiť to, že obrázku nahratému do aplikácie bude transformovaná perspektíva.
+
+\subsection{Nahratie obrázku a transformácia perspektívy}
+Prvým krokom našej práce bolo umožniť používateľovi vybrať fotografiu terča z miestneho úložiska. V používateľskom rozhraní je to realizované pomocou HTML prvku
+\verb|<input type="file">|, na ktorý je napojený ``change'' event listener. Po výbere súboru sa v JavaScripte vytvorí objekt \verb|Image|, pričom sa 
+jeho \verb|src| nastaví na lokálnu URL súboru.
+
+Po nahratí obrázku budeme tento obrázok vykreslovať do \verb|<canvas>| elementu s identifikátorom \verb|warpCanvas|. Je však potrebné zabezpečiť aby
+sa pri rôznych veľkostiach obrázku ``nerozbilo'' rozloženie našej webovej aplikácie. Následne v aplikácii vyčistíme predošlý obsah a uložíme pixelové
+data do 2D kontextu (\verb|CanvasRenderingContext2D|).
+
+\subsubsection{Detekcia rohov papiera terča – podrobný popis}
+
+Proces od načítania obrázku až po spoľahlivé nájdenie štyroch rohov papierového terča je realizovaný v niekoľkých úzko previazaných krokoch. Tento reťazec transformácií sme optimalizovali preto, aby sme predišli chybám pri náročných vstupoch (neostré okraje, šum, nerovnomerné osvetlenie) a zabezpečili čo najvyššiu spoľahlivosť.
+
+\paragraph{1. Načítanie a prvotné zobrazenie obrazu}  
+Prvým krokom je načítanie vybranej fotografie do OpenCV matice pomocou \verb|cv.imread()|. Bez tohto volania by sme nemohli použiť žiadne ďalšie spracovanie:
+
+\begin{lstlisting}[
+  style=code-listing,
+  language=JavaScript,
+  caption={Načítanie obrázku do OpenCV matice},
+  label={lst:imread}
+]
+const imgElement = new Image();
+reader.onload = e => imgElement.src = e.target.result;
+reader.readAsDataURL(file);
+imgElement.onload = () => {
+  let srcMat = cv.imread(imgElement);
+  % srcMat je teraz vstup pre ďalšie funkcie
+};
+\end{lstlisting}
+
+\paragraph{2. Konverzia do medzipodôb}  
+Aby sme mohli presne vyseparovať papier od pozadia, transformujeme farbu do viacerých reprezentácií – odtieň šedej pre binárne prahovanie a HSV pre farebné maskovanie. Obe konverzie používame pre robustnejšiu detekciu:
+
+\begin{lstlisting}[
+  caption={Konverzia na šedú a HSV pred maskou},
+  label={lst:color-conversion},
+  language=JavaScript,
+  style=code-listing
+]
+let gray = convertToGrayScale(srcMat);    // cv.COLOR_RGBA2GRAY
+let hsv  = convertToHSV(srcMat);           // cv.COLOR_BGR2HSV
+let mask = createMask(hsv, LOW, HIGH);     // inRange + inRange
+\end{lstlisting}
+
+\paragraph{3. Filterovanie a reťazenie rozostrení}  
+Priame prahovanie často trpí šumom alebo drobnými škvrnami na papieri. Preto na masku aplikujeme v postupnosti:
+\begin{itemize}
+  \item \verb|applyMedianBlur()| – odstraňuje drobné salt-and-pepper artefakty,  
+  \item \verb|applyGaussianBlur()| – uhladzuje hrany kontúr,  
+  \item \verb|applyDefaultBlur()|  – zjemňuje prechody a pripravuje na spoľahlivejšiu detekciu kontúr.
+\end{itemize}
+
+\begin{lstlisting}[
+  caption={Reťazenie blur operácií pre elimináciu šumu},
+  label={lst:blur-chain},
+  language=JavaScript,
+  style=code-listing
+]
+let mBlur = applyMedianBlur(mask);
+let gBlur = applyGaussianBlur(mBlur); mBlur.delete();
+let dBlur = applyDefaultBlur(gBlur); gBlur.delete();
+// výsledná matica dBlur je pripravená na findContours()
+\end{lstlisting}
+
+\paragraph{4. Vyhľadanie a výber najväčšej kontúry}  
+Z rozostrenej masky zavoláme \verb|findContours()| a vyberieme tú, ktorá má najväčšiu plochu (\verb|getLargestContour()|). Táto kontúra najpravdepodobnejšie zodpovedá obrysu papierovej plochy:
+
+\begin{lstlisting}[
+  caption={Detekcia a výber najväčšej kontúry},
+  label={lst:contour-detection},
+  language=JavaScript,
+  style=code-listing
+]
+let contours = findContours(dBlur);
+let largest = getLargestContour(contours);
+contours.delete();  // uvoľnenie pamäte
+\end{lstlisting}
+
+Na ďalšie spracovanie potrebujeme OpenCV maticu pixelov, ktorú získame volaním
+
+\begin{verbatim}
+const srcMat = cv.imread(warpCanvas);
+\end{verbatim}
+
+Funkcia \verb|cv.imread| načíta obsah plátna do objektu typu \verb|cv.Mat|, s ktorým už dokážeme pracovať ako s maticou v OpenCV.js.
+
+Pre odstránenie perspektívneho skreslenia implementujeme v module \verb|utils/imageProcessing.js| funkciu
+
+\begin{verbatim}
+warpPerspective(srcMat, corners)
+\end{verbatim}
+
+kde \verb|corners| je pole štyroch bodov (získaných buď automaticky alebo manuálne kliknutím), definujúcich rohy terča. Funkcia vypočíta transformačnú maticu (homografiu)
+a aplikuje ju na \verb|srcMat|, čím vznikne nový \verb|cv.Mat| narovnaného výrezu terča. Výsledok vykreslíme späť na plátno pomocou
+
+\begin{verbatim}
+cv.imshow(warpCanvas, warpedMat);
+\end{verbatim}
+
+a odstránime dočasné matice volaniami \verb|srcMat.delete()| a \verb|warpedMat.delete()|, aby sme predišli úniku pamäte.
+
+Takto pripravený a narovnaný výrez terča je vstupom pre nasledujúce kroky - detekciu elipsy a vyklikanie zásahov.
 
 \iffalse
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -896,7 +1007,7 @@ množstvo značiek a~skratiek najmä na označenie fyzikálnych
 veličín v matematických vzťahoch,
 ale aj zostručnenie textového prejavu najmä pri zložitých názvoch
 vedeckých metód, zariadení alebo javov.
-Sú to napríklad RTG (röntgenové žiarenie),
+Sú to napríklad RTG (rontgenové žiarenie),
 AFM (mikroskop atómových síl),
 TEM (transmisný elektrónový mikroskop),
 IR (infračervené žiarenie),
