@@ -632,6 +632,18 @@ nadol, doľava či doprava
 extrémnych odchýlok. Tieto parametre spoločne pokrývajú aspekty presnosti, konzistencie i systematických chýb a umožňujú komplexné vyhodnotenie streleckého 
 výkonu.
 
+\subsection{Podmienky pre fotografie terčov}
+V práci používame na detekciu a získavanie dát z fotografie knižnicu OpenCV (viď podkapitolu \ref{sec:opencv}), preto je nevyhnutné zaviesť prísne pravidlá 
+pre snímanie terča, aby algoritmy mohli spoľahlivo a presne identifikovať zásahy.
+
+Pri fotení terčov je potrebné dodržiavať následné pravidlá. Terč musí byť na obrázku úplne viditeľný - nesmú chýbať žiadne rohy ani okraje. Papier, na ktorom 
+je vytlačený terč, nesmie byť pokrčený, prehnutý ani inak zdeformovaný. Povrch musí byť rovný. Osvetlenie terča musí byť rovnomerné a dostatočné, pričom treba dbať 
+na elimináciu tieňov. Užívateľ by mal fotografovať terč čo najpriamejšie, ideálne s telefónom drženým vodorovne aj zvisle, čím sa minimalizuje perspektívne skreslenie. 
+Odporúča sa približný záber z primeranej vzdialenosti - ani príliš z diaľky (kde klesá ostrosť a rozlíšenie), ani príliš zblízka (kedy môže dochádzať k geometrickému 
+skresleniu okrajov). Cieľom je mať terč vycentrovaný v strede snímky, aby OpenCV dokázalo spoľahlivo vykonať kalibráciu, detekciu stredu a rohov terča.
+
+
+
 \subsection{Špecifikácia požiadaviek}
 V tejto časti zhrnieme základné požiadavky na navrhovanú aplikáciu, ktoré zabezpečia správnu funkčnosť a použiteľnosť.
 
